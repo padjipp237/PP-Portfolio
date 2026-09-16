@@ -974,6 +974,87 @@ footer {
 }
 
 ```css
+/* =========================================================
+   JOURNEY ENHANCEMENTS
+   ========================================================= */
+
+.journey-intro {
+    max-width: 720px;
+    margin-bottom: 90px;
+}
+
+.journey-intro p {
+    color: var(--muted);
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+.timeline-category {
+    margin-bottom: 12px;
+
+    color: #555;
+
+    font-size: 9px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+.timeline-content p + p {
+    margin-top: 15px;
+}
+
+.journey-projects {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    margin-top: 30px;
+
+    border-top: 1px solid var(--border);
+    border-left: 1px solid var(--border);
+}
+
+.journey-projects div {
+    padding: 18px;
+
+    border-right: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+}
+
+.journey-projects strong {
+    display: block;
+
+    font-size: 12px;
+}
+
+.journey-projects span {
+    display: block;
+
+    margin-top: 5px;
+
+    color: #666;
+
+    font-size: 9px;
+
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+@media (max-width: 800px) {
+
+    .journey-intro {
+        margin-bottom: 60px;
+    }
+
+    .journey-projects {
+        grid-template-columns: 1fr;
+    }
+
+}
+```
+
+
+```css
 html {
     background: #080808 !important;
 }
