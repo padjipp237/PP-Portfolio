@@ -8,11 +8,19 @@
     --background: #080808;
     --surface: #101010;
     --surface-light: #161616;
+
     --text: #f2f2f2;
     --muted: #8a8a8a;
+
     --border: #252525;
     --border-light: #333333;
+
     --accent: #ffffff;
+
+    /* Glass panels */
+    --glass-bg: rgba(255, 255, 255, 0.025);
+    --glass-bg-hover: rgba(255, 255, 255, 0.045);
+    --glass-border: rgba(255, 255, 255, 0.08);
 
     --max-width: 1200px;
     --section-padding: 140px;
@@ -31,14 +39,23 @@
 
 html {
     scroll-behavior: smooth;
+    background: var(--background) !important;
 }
 
 body {
-    background: var(--background);
-    color: var(--text);
+    min-height: 100vh;
+
+    background: var(--background) !important;
+    color: var(--text) !important;
+
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.6;
+
     overflow-x: hidden;
+}
+
+main {
+    background: transparent !important;
 }
 
 a {
@@ -53,11 +70,12 @@ a {
 
 
 /* =========================================================
-   GLOBAL GRID
+   GLOBAL BACKGROUND
    ========================================================= */
 
 body::before {
     content: "";
+
     position: fixed;
     inset: 0;
 
@@ -120,6 +138,7 @@ body::after {
     border-bottom: 1px solid var(--border);
 
     backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
 
     z-index: 100;
 }
@@ -127,6 +146,7 @@ body::after {
 .logo {
     font-size: 20px;
     font-weight: 800;
+
     letter-spacing: -1px;
 
     transition: opacity 0.25s ease;
@@ -155,9 +175,17 @@ body::after {
         transform 0.25s ease;
 }
 
-.navbar nav a:hover {
+.navbar nav a:hover,
+.navbar nav a.active {
     color: var(--text);
+}
+
+.navbar nav a:hover {
     transform: translateY(-1px);
+}
+
+.navbar.scrolled {
+    background: rgba(8, 8, 8, 0.95);
 }
 
 
@@ -293,7 +321,7 @@ body::after {
 
 
 /* =========================================================
-   SECTIONS
+   GENERAL SECTIONS
    ========================================================= */
 
 .section {
@@ -337,8 +365,22 @@ body::after {
 
 
 /* =========================================================
-   TIMELINE
+   JOURNEY
    ========================================================= */
+
+.journey-intro {
+    max-width: 720px;
+
+    margin-bottom: 90px;
+}
+
+.journey-intro p {
+    color: var(--muted);
+
+    font-size: 18px;
+
+    line-height: 1.8;
+}
 
 .timeline {
     position: relative;
@@ -346,6 +388,11 @@ body::after {
     max-width: 950px;
 
     margin: auto;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 35px;
 }
 
 .timeline::before {
@@ -372,7 +419,7 @@ body::after {
 
     gap: 45px;
 
-    padding-bottom: 75px;
+    padding-bottom: 40px;
 }
 
 .timeline-item::before {
@@ -407,7 +454,37 @@ body::after {
 }
 
 .timeline-content {
-    padding-left: 20px;
+    padding: 28px 30px;
+
+    border: 1px solid var(--glass-border);
+
+    background: var(--glass-bg);
+
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    border-radius: 10px;
+
+    transition:
+        background 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.timeline-content:hover {
+    background: var(--glass-bg-hover);
+
+    border-color: rgba(255, 255, 255, 0.13);
+}
+
+.timeline-category {
+    margin-bottom: 12px;
+
+    color: #555;
+
+    font-size: 9px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
 }
 
 .timeline-content h3 {
@@ -426,6 +503,13 @@ body::after {
     font-size: 15px;
 }
 
+.timeline-content p + p {
+    margin-top: 15px;
+}
+
+
+/* Journey tags */
+
 .tags {
     display: flex;
 
@@ -439,7 +523,11 @@ body::after {
 .tags span {
     padding: 5px 9px;
 
-    border: 1px solid var(--border);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    background: rgba(255, 255, 255, 0.035);
+
+    border-radius: 999px;
 
     color: #777;
 
@@ -451,1269 +539,36 @@ body::after {
 }
 
 
-/* =========================================================
-   PROJECTS
-   ========================================================= */
-
-.project-grid {
-    display: grid;
-
-    grid-template-columns:
-        repeat(3, 1fr);
-
-    border-top: 1px solid var(--border);
-    border-left: 1px solid var(--border);
-}
-
-.project-card {
-    min-height: 360px;
-
-    padding: 35px;
-
-    border-right: 1px solid var(--border);
-    border-bottom: 1px solid var(--border);
-
-    position: relative;
-
-    transition:
-        background 0.3s ease,
-        transform 0.3s ease;
-}
-
-.project-card:hover {
-    background: var(--surface);
-
-    transform: translateY(-4px);
-}
-
-.project-number {
-    color: #555;
-
-    font-size: 10px;
-
-    letter-spacing: 2px;
-}
-
-.project-card h3 {
-    margin-top: 90px;
-
-    font-size: 27px;
-
-    letter-spacing: -1.5px;
-}
-
-.project-card p {
-    margin-top: 15px;
-
-    color: var(--muted);
-
-    font-size: 14px;
-}
-
-.project-card a {
-    position: absolute;
-
-    bottom: 35px;
-
-    color: var(--text);
-
-    font-size: 10px;
-
-    font-weight: 700;
-
-    letter-spacing: 1px;
-
-    text-transform: uppercase;
-}
-
-
-/* =========================================================
-   FEATURE SECTIONS
-   ========================================================= */
-
-.feature-section {
-    max-width: var(--max-width);
-
-    margin: 0 auto;
-
-    padding:
-        170px 40px;
-
-    border-top: 1px solid var(--border);
-}
-
-.feature-section h2 {
-    max-width: 900px;
-
-    font-size: clamp(42px, 7vw, 88px);
-
-    line-height: 0.95;
-
-    letter-spacing: -5px;
-}
-
-.feature-section > p {
-    max-width: 650px;
-
-    margin-top: 35px;
-
-    color: var(--muted);
-
-    font-size: 17px;
-
-    line-height: 1.8;
-}
-
-.text-link {
-    display: inline-block;
-
-    margin-top: 35px;
-
-    padding-bottom: 6px;
-
-    border-bottom: 1px solid #555;
-
-    font-size: 11px;
-
-    font-weight: 700;
-
-    letter-spacing: 1px;
-
-    text-transform: uppercase;
-
-    transition:
-        border-color 0.25s ease,
-        color 0.25s ease;
-}
-
-.text-link:hover {
-    border-color: var(--text);
-}
-
-
-/* =========================================================
-   K9IQ
-   ========================================================= */
-
-.k9-section {
-    background:
-        linear-gradient(
-            90deg,
-            rgba(255,255,255,0.025),
-            transparent
-        );
-}
-
-.k9-grid {
-    display: grid;
-
-    grid-template-columns:
-        repeat(3, 1fr);
-
-    margin-top: 90px;
-
-    border-top: 1px solid var(--border);
-    border-left: 1px solid var(--border);
-}
-
-.k9-grid > div {
-    min-height: 260px;
-
-    padding: 30px;
-
-    border-right: 1px solid var(--border);
-    border-bottom: 1px solid var(--border);
-}
-
-.k9-grid span {
-    color: #555;
-
-    font-size: 10px;
-
-    letter-spacing: 2px;
-}
-
-.k9-grid h3 {
-    margin-top: 70px;
-
-    font-size: 23px;
-
-    letter-spacing: -1px;
-}
-
-.k9-grid p {
-    margin-top: 12px;
-
-    color: var(--muted);
-
-    font-size: 13px;
-}
-
-
-/* =========================================================
-   REAL ANALYTIX
-   ========================================================= */
-
-.real-section {
-    min-height: 600px;
-}
-
-.real-content {
-    display: grid;
-
-    grid-template-columns:
-        1fr 1.5fr;
-
-    gap: 100px;
-
-    align-items: center;
-}
-
-.real-logo {
-    font-size: clamp(80px, 14vw, 170px);
-
-    font-weight: 900;
-
-    letter-spacing: -12px;
-
-    line-height: 1;
-}
-
-.real-logo span {
-    color: #555;
-}
-
-.real-content h3 {
-    font-size: 32px;
-
-    letter-spacing: -2px;
-}
-
-.real-content p {
-    max-width: 600px;
-
-    margin-top: 20px;
-
-    color: var(--muted);
-
-    font-size: 16px;
-}
-
-
-/* =========================================================
-   CONTACT
-   ========================================================= */
-
-.contact-section {
-    max-width: var(--max-width);
-
-    margin: auto;
-
-    padding:
-        170px 40px;
-
-    border-top: 1px solid var(--border);
-}
-
-.contact-section h2 {
-    max-width: 800px;
-
-    margin-bottom: 45px;
-
-    font-size: clamp(40px, 7vw, 90px);
-
-    line-height: 0.95;
-
-    letter-spacing: -5px;
-}
-
-
-/* =========================================================
-   FOOTER
-   ========================================================= */
-
-footer {
-    max-width: var(--max-width);
-
-    margin: auto;
-
-    padding: 35px 40px;
-
-    display: flex;
-
-    justify-content: space-between;
-
-    border-top: 1px solid var(--border);
-
-    color: #555;
-
-    font-size: 9px;
-
-    font-weight: 700;
-
-    letter-spacing: 2px;
-}
-
-
-/* =========================================================
-   ANIMATIONS
-   ========================================================= */
-
-@keyframes fadeUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.hero-label {
-    animation: fadeUp 0.8s ease forwards;
-}
-
-.hero h1 {
-    animation: fadeUp 0.8s 0.1s ease both;
-}
-
-.hero-description {
-    animation: fadeUp 0.8s 0.2s ease both;
-}
-
-.hero-buttons {
-    animation: fadeUp 0.8s 0.3s ease both;
-}
-
-
-/* =========================================================
-   MOBILE
-   ========================================================= */
-
-@media (max-width: 800px) {
-
-    :root {
-        --section-padding: 90px;
-    }
-
-    .navbar {
-        height: 65px;
-
-        padding: 0 20px;
-    }
-
-    .navbar nav {
-        display: none;
-    }
-
-    .hero {
-        padding:
-            130px 20px
-            80px;
-    }
-
-    .hero h1 {
-        font-size: clamp(43px, 13vw, 75px);
-
-        letter-spacing: -4px;
-    }
-
-    .hero-description {
-        font-size: 15px;
-    }
-
-    .hero-buttons {
-        flex-direction: column;
-
-        align-items: stretch;
-    }
-
-    .hero-meta {
-        flex-wrap: wrap;
-
-        margin-top: 45px;
-    }
-
-    .section,
-    .feature-section,
-    .contact-section {
-        padding-left: 20px;
-        padding-right: 20px;
-    }
-
-    .section-heading {
-        margin-bottom: 50px;
-    }
-
-    .timeline::before {
-        left: 5px;
-    }
-
-    .timeline-item {
-        display: block;
-
-        padding-left: 30px;
-
-        padding-bottom: 55px;
-    }
-
-    .timeline-item::before {
-        left: 1px;
-    }
-
-    .timeline-year {
-        margin-bottom: 15px;
-    }
-
-    .timeline-content {
-        padding-left: 0;
-    }
-
-    .timeline-content h3 {
-        font-size: 21px;
-    }
-
-    .project-grid,
-    .k9-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .project-card {
-        min-height: 300px;
-    }
-
-    .project-card h3 {
-        margin-top: 65px;
-    }
-
-    .feature-section h2 {
-        letter-spacing: -3px;
-    }
-
-    .real-content {
-        grid-template-columns: 1fr;
-
-        gap: 50px;
-    }
-
-    .real-logo {
-        font-size: 100px;
-    }
-
-    .contact-section h2 {
-        letter-spacing: -3px;
-    }
-
-    footer {
-        padding-left: 20px;
-        padding-right: 20px;
-
-        flex-direction: column;
-
-        gap: 12px;
-    }
-
-   ```css
-/* =========================================================
-   JAVASCRIPT INTERACTION STATES
-   ========================================================= */
-
-.reveal {
-    opacity: 0;
-    transform: translateY(25px);
-
-    transition:
-        opacity 0.8s ease,
-        transform 0.8s ease;
-}
-
-.reveal.revealed {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-
-/* Navbar after scrolling */
-
-.navbar.scrolled {
-    background: rgba(8, 8, 8, 0.95);
-}
-
-
-/* Active navigation item */
-
-.navbar nav a.active {
-    color: var(--text);
-}
-
-
-/* Stagger project cards */
-
-.project-card:nth-child(2) {
-    transition-delay: 0.08s;
-}
-
-.project-card:nth-child(3) {
-    transition-delay: 0.16s;
-}
-
-
-/* Stagger K9IQ cards */
-
-.k9-grid > div:nth-child(2) {
-    transition-delay: 0.08s;
-}
-
-.k9-grid > div:nth-child(3) {
-    transition-delay: 0.16s;
-}
-```
-
-}
-
-```css
-/* =========================================================
-   JOURNEY ENHANCEMENTS
-   ========================================================= */
-
-.journey-intro {
-    max-width: 720px;
-    margin-bottom: 90px;
-}
-
-.journey-intro p {
-    color: var(--muted);
-    font-size: 18px;
-    line-height: 1.8;
-}
-
-.timeline-category {
-    margin-bottom: 12px;
-
-    color: #555;
-
-    font-size: 9px;
-    font-weight: 700;
-
-    letter-spacing: 2px;
-}
-
-.timeline-content p + p {
-    margin-top: 15px;
-}
-
-.journey-projects {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-
-    margin-top: 30px;
-
-    border-top: 1px solid var(--border);
-    border-left: 1px solid var(--border);
-}
-
-.journey-projects div {
-    padding: 18px;
-
-    border-right: 1px solid var(--border);
-    border-bottom: 1px solid var(--border);
-}
-
-.journey-projects strong {
-    display: block;
-
-    font-size: 12px;
-}
-
-.journey-projects span {
-    display: block;
-
-    margin-top: 5px;
-
-    color: #666;
-
-    font-size: 9px;
-
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-@media (max-width: 800px) {
-
-    .journey-intro {
-        margin-bottom: 60px;
-    }
-
-    .journey-projects {
-        grid-template-columns: 1fr;
-    }
-
-}
-```
-
-```css
-/* =========================================================
-   PROJECT ENHANCEMENTS
-   ========================================================= */
-
-.projects-intro {
-    max-width: 650px;
-
-    margin-bottom: 65px;
-}
-
-.projects-intro p {
-    color: var(--muted);
-
-    font-size: 17px;
-
-    line-height: 1.8;
-}
-
-
-.project-grid {
-    grid-template-columns: repeat(2, 1fr);
-}
-
-
-.project-card {
-    min-height: 390px;
-
-    display: flex;
-    flex-direction: column;
-}
-
-
-.project-top {
-    display: flex;
-
-    justify-content: space-between;
-
-    align-items: center;
-}
-
-
-.project-type {
-    color: #555;
-
-    font-size: 8px;
-
-    font-weight: 700;
-
-    letter-spacing: 1.5px;
-}
-
-
-.project-card h3 {
-    margin-top: 85px;
-
-    font-size: 30px;
-
-    letter-spacing: -1.5px;
-}
-
-
-.project-card p {
-    max-width: 520px;
-}
-
-
-.project-tech {
-    display: flex;
-
-    flex-wrap: wrap;
-
-    gap: 6px;
-
-    margin-top: 25px;
-}
-
-
-.project-tech span {
-    padding: 5px 8px;
-
-    border: 1px solid var(--border);
-
-    color: #666;
-
-    font-size: 8px;
-
-    font-weight: 700;
-
-    letter-spacing: 1px;
-
-    text-transform: uppercase;
-}
-
-
-.project-link {
-    margin-top: auto;
-
-    padding-top: 35px;
-
-    color: var(--text);
-
-    font-size: 10px;
-
-    font-weight: 700;
-
-    letter-spacing: 1px;
-
-    text-transform: uppercase;
-}
-
-
-.github-callout {
-    display: flex;
-
-    align-items: center;
-
-    justify-content: space-between;
-
-    gap: 40px;
-
-    margin-top: 70px;
-
-    padding: 45px;
-
-    border: 1px solid var(--border);
-
-    background: var(--surface);
-}
-
-
-.github-callout .feature-label {
-    margin-bottom: 12px;
-}
-
-
-.github-callout h3 {
-    font-size: 25px;
-
-    letter-spacing: -1px;
-}
-
-
-@media (max-width: 800px) {
-
-    .project-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .github-callout {
-        flex-direction: column;
-
-        align-items: flex-start;
-
-        padding: 30px;
-    }
-
-}
-```
-```css
-/* =========================
-   FOOTBALL ANALYTICS
-========================= */
-
-.football-section {
-    position: relative;
-}
-
-.football-hero {
-    display: grid;
-    grid-template-columns: 1fr 220px;
-    gap: 40px;
-    align-items: center;
-    margin-bottom: 50px;
-}
-
-.section-kicker {
-    display: block;
-    margin-bottom: 14px;
-    font-size: 0.72rem;
-    letter-spacing: 0.16em;
-    color: var(--muted);
-    font-weight: 600;
-}
-
-.football-hero h2 {
-    max-width: 800px;
-    margin: 0 0 18px;
-    font-size: clamp(2.5rem, 6vw, 5rem);
-    line-height: 0.95;
-    letter-spacing: -0.05em;
-}
-
-.football-hero p {
-    max-width: 650px;
-    color: var(--muted);
-    font-size: 1.05rem;
-    line-height: 1.8;
-}
-
-.fsi-mark {
-    min-height: 220px;
-    border: 1px solid var(--border-light);
-    background: var(--surface);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-.fsi-mark span {
-    font-size: 4rem;
-    font-weight: 800;
-    letter-spacing: -0.08em;
-}
-
-.fsi-mark small {
-    margin-top: 8px;
-    color: var(--muted);
-    font-size: 0.6rem;
-    line-height: 1.5;
-    letter-spacing: 0.15em;
-}
-
-
-.football-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 18px;
-}
-
-.football-card {
-    position: relative;
-    min-height: 290px;
-    padding: 30px;
-    border: 1px solid var(--border);
-    background: var(--surface);
-    transition: transform 0.3s ease,
-                border-color 0.3s ease,
-                background 0.3s ease;
-}
-
-.football-card:hover {
-    transform: translateY(-5px);
-    border-color: var(--border-light);
-    background: var(--surface-light);
-}
-
-.football-feature {
-    grid-column: span 2;
-    min-height: 340px;
-}
-
-.football-card-top {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 35px;
-}
-
-.card-number {
-    font-family: monospace;
-    color: var(--muted);
-    font-size: 0.75rem;
-}
-
-.card-status {
-    font-size: 0.62rem;
-    letter-spacing: 0.13em;
-    color: var(--muted);
-}
-
-.football-card h3 {
-    margin: 0 0 15px;
-    font-size: 1.7rem;
-    letter-spacing: -0.03em;
-}
-
-.football-card p {
-    max-width: 650px;
-    color: var(--muted);
-    line-height: 1.75;
-}
-
-.equation {
-    margin: 28px 0;
-    padding: 18px;
-    border-left: 2px solid var(--text);
-    background: var(--background);
-    font-family: monospace;
-    font-size: 0.9rem;
-    line-height: 1.8;
-}
-
-.equation span {
-    color: var(--muted);
-}
-
-.football-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin-top: 25px;
-}
-
-.football-tags span {
-    padding: 7px 10px;
-    border: 1px solid var(--border);
-    color: var(--muted);
-    font-size: 0.68rem;
-    letter-spacing: 0.04em;
-}
-
-
-.football-mini-visual {
-    display: flex;
-    align-items: center;
-    gap: 0;
-    margin-top: 35px;
-}
-
-.football-mini-visual span {
-    width: 28px;
-    height: 28px;
-    border: 1px solid var(--border-light);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 0.65rem;
-}
-
-.football-mini-visual i {
-    width: 45px;
-    height: 1px;
-    background: var(--border-light);
-}
-
-
-.zone-model {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    margin-top: 35px;
-    border: 1px solid var(--border);
-}
-
-.zone-model span {
-    padding: 16px 8px;
-    text-align: center;
-    border-right: 1px solid var(--border);
-    font-family: monospace;
-    font-size: 0.7rem;
-    color: var(--muted);
-}
-
-.zone-model span:last-child {
-    border-right: none;
-}
-
-
-.football-research {
-    margin-top: 18px;
-    padding: 35px;
-    border: 1px solid var(--border);
-    background: var(--surface);
-}
-
-.football-research h3 {
-    max-width: 650px;
-    margin: 0;
-    font-size: clamp(1.8rem, 4vw, 3rem);
-    letter-spacing: -0.04em;
-}
-
-.research-columns {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-    margin-top: 40px;
-    padding-top: 30px;
-    border-top: 1px solid var(--border);
-}
-
-.research-columns span {
-    font-size: 0.68rem;
-    letter-spacing: 0.14em;
-    color: var(--muted);
-}
-
-.research-columns p {
-    margin-top: 12px;
-    color: var(--muted);
-    line-height: 1.7;
-    font-size: 0.9rem;
-}
-
-
-/* Football mobile */
-
-@media (max-width: 800px) {
-
-    .football-hero {
-        grid-template-columns: 1fr;
-    }
-
-    .fsi-mark {
-        min-height: 150px;
-    }
-
-    .football-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .football-feature {
-        grid-column: span 1;
-    }
-
-    .research-columns {
-        grid-template-columns: 1fr;
-        gap: 25px;
-    }
-}
-```
-
-```css
-/* =========================
-   GLASS / TRANSPARENT PANELS
-========================= */
-
-:root {
-    --glass-bg: rgba(255, 255, 255, 0.025);
-    --glass-bg-hover: rgba(255, 255, 255, 0.045);
-    --glass-border: rgba(255, 255, 255, 0.08);
-}
-
-
-/* Journey */
-
-.timeline-content {
-    padding: 28px 30px;
-    border: 1px solid var(--glass-border);
-    background: var(--glass-bg);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border-radius: 10px;
-}
-
-.timeline-content:hover {
-    background: var(--glass-bg-hover);
-    border-color: rgba(255, 255, 255, 0.13);
-}
-
-
 /* Journey project boxes */
 
 .journey-projects {
     display: grid;
+
     grid-template-columns: repeat(3, 1fr);
+
     gap: 12px;
+
     margin-top: 25px;
 }
 
 .journey-projects > div {
     padding: 16px;
+
     border: 1px solid var(--glass-border);
+
     background: rgba(255, 255, 255, 0.02);
+
     border-radius: 8px;
 }
 
 .journey-projects strong {
     display: block;
+
     margin-bottom: 6px;
+
+    font-size: 12px;
 }
 
 .journey-projects span {
-    color: var(--muted);
-    font-size: 0.75rem;
-}
-
-
-/* Project cards */
-
-.project-card {
-    border: 1px solid var(--glass-border);
-    background: var(--glass-bg);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border-radius: 10px;
-}
-
-.project-card:hover {
-    background: var(--glass-bg-hover);
-    border-color: rgba(255, 255, 255, 0.14);
-}
-
-
-/* Project technology pills */
-
-.project-tech span,
-.tags span,
-.football-tags span {
-    background: rgba(255, 255, 255, 0.035);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    border-radius: 999px;
-}
-
-
-/* GitHub panel */
-
-.github-callout {
-    border: 1px solid var(--glass-border);
-    background: var(--glass-bg);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border-radius: 10px;
-}
-
-
-/* Football cards */
-
-.football-card {
-    border: 1px solid var(--glass-border);
-    background: var(--glass-bg);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border-radius: 10px;
-}
-
-.football-card:hover {
-    background: var(--glass-bg-hover);
-    border-color: rgba(255, 255, 255, 0.14);
-}
-
-
-/* Football research panel */
-
-.football-research {
-    border: 1px solid var(--glass-border);
-    background: var(--glass-bg);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border-radius: 10px;
-}
-
-
-/* Football mini sections */
-
-.equation,
-.zone-model,
-.football-mini-visual {
-    background: rgba(0, 0, 0, 0.18);
-    border-radius: 6px;
-}
-
-
-/* K9IQ cards */
-
-.k9-grid > div {
-    border: 1px solid var(--glass-border);
-    background: var(--glass-bg);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border-radius: 10px;
-    padding: 28px;
-    transition:
-        background 0.3s ease,
-        border-color 0.3s ease,
-        transform 0.3s ease;
-}
-
-.k9-grid > div:hover {
-    background: var(--glass-bg-hover);
-    border-color: rgba(255, 255, 255, 0.14);
-    transform: translateY(-4px);
-}
-
-
-/* Real AnalytIX */
-
-.real-content {
-    padding: 35px;
-    border: 1px solid var(--glass-border);
-    background: var(--glass-bg);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border-radius: 10px;
-}
-
-
-/* Contact */
-
-.contact-section {
-    padding: 80px 30px;
-    margin-top: 40px;
-    border: 1px solid var(--glass-border);
-    background: var(--glass-bg);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border-radius: 10px;
-}
-
-
-/* More breathing room */
-
-.timeline {
-    gap: 35px;
-}
-
-.project-grid {
-    gap: 22px;
-}
-
-.football-grid {
-    gap: 22px;
-}
-
-.k9-grid {
-    gap: 22px;
-}
-
-
-/* Mobile */
-
-@media (max-width: 800px) {
-
-    .journey-projects {
-        grid-template-columns: 1fr;
-    }
-
-    .timeline-content {
-        padding: 22px;
-    }
-
-    .project-card,
-    .football-card,
-    .k9-grid > div {
-        padding: 22px;
-    }
-
-    .real-content {
-        padding: 25px;
-    }
-
-}
-```
-
-
-```css
-html {
-    background: #080808 !important;
-}
-
-body {
-    background: #080808 !important;
-    color: #f2f2f2 !important;
-    min-height: 100vh;
-}
-
-main {
-    background: transparent !important;
-}
-```
-
+    display: block
 ```
