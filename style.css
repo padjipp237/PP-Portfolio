@@ -1053,6 +1053,167 @@ footer {
 }
 ```
 
+```css
+/* =========================================================
+   PROJECT ENHANCEMENTS
+   ========================================================= */
+
+.projects-intro {
+    max-width: 650px;
+
+    margin-bottom: 65px;
+}
+
+.projects-intro p {
+    color: var(--muted);
+
+    font-size: 17px;
+
+    line-height: 1.8;
+}
+
+
+.project-grid {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+
+.project-card {
+    min-height: 390px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+.project-top {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+
+.project-type {
+    color: #555;
+
+    font-size: 8px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+}
+
+
+.project-card h3 {
+    margin-top: 85px;
+
+    font-size: 30px;
+
+    letter-spacing: -1.5px;
+}
+
+
+.project-card p {
+    max-width: 520px;
+}
+
+
+.project-tech {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 6px;
+
+    margin-top: 25px;
+}
+
+
+.project-tech span {
+    padding: 5px 8px;
+
+    border: 1px solid var(--border);
+
+    color: #666;
+
+    font-size: 8px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+}
+
+
+.project-link {
+    margin-top: auto;
+
+    padding-top: 35px;
+
+    color: var(--text);
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+}
+
+
+.github-callout {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 40px;
+
+    margin-top: 70px;
+
+    padding: 45px;
+
+    border: 1px solid var(--border);
+
+    background: var(--surface);
+}
+
+
+.github-callout .feature-label {
+    margin-bottom: 12px;
+}
+
+
+.github-callout h3 {
+    font-size: 25px;
+
+    letter-spacing: -1px;
+}
+
+
+@media (max-width: 800px) {
+
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .github-callout {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        padding: 30px;
+    }
+
+}
+```
+
+
 
 ```css
 html {
