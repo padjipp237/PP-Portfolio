@@ -1212,6 +1212,270 @@ footer {
 
 }
 ```
+```css
+/* =========================
+   FOOTBALL ANALYTICS
+========================= */
+
+.football-section {
+    position: relative;
+}
+
+.football-hero {
+    display: grid;
+    grid-template-columns: 1fr 220px;
+    gap: 40px;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.section-kicker {
+    display: block;
+    margin-bottom: 14px;
+    font-size: 0.72rem;
+    letter-spacing: 0.16em;
+    color: var(--muted);
+    font-weight: 600;
+}
+
+.football-hero h2 {
+    max-width: 800px;
+    margin: 0 0 18px;
+    font-size: clamp(2.5rem, 6vw, 5rem);
+    line-height: 0.95;
+    letter-spacing: -0.05em;
+}
+
+.football-hero p {
+    max-width: 650px;
+    color: var(--muted);
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+.fsi-mark {
+    min-height: 220px;
+    border: 1px solid var(--border-light);
+    background: var(--surface);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.fsi-mark span {
+    font-size: 4rem;
+    font-weight: 800;
+    letter-spacing: -0.08em;
+}
+
+.fsi-mark small {
+    margin-top: 8px;
+    color: var(--muted);
+    font-size: 0.6rem;
+    line-height: 1.5;
+    letter-spacing: 0.15em;
+}
+
+
+.football-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.football-card {
+    position: relative;
+    min-height: 290px;
+    padding: 30px;
+    border: 1px solid var(--border);
+    background: var(--surface);
+    transition: transform 0.3s ease,
+                border-color 0.3s ease,
+                background 0.3s ease;
+}
+
+.football-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--border-light);
+    background: var(--surface-light);
+}
+
+.football-feature {
+    grid-column: span 2;
+    min-height: 340px;
+}
+
+.football-card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 35px;
+}
+
+.card-number {
+    font-family: monospace;
+    color: var(--muted);
+    font-size: 0.75rem;
+}
+
+.card-status {
+    font-size: 0.62rem;
+    letter-spacing: 0.13em;
+    color: var(--muted);
+}
+
+.football-card h3 {
+    margin: 0 0 15px;
+    font-size: 1.7rem;
+    letter-spacing: -0.03em;
+}
+
+.football-card p {
+    max-width: 650px;
+    color: var(--muted);
+    line-height: 1.75;
+}
+
+.equation {
+    margin: 28px 0;
+    padding: 18px;
+    border-left: 2px solid var(--text);
+    background: var(--background);
+    font-family: monospace;
+    font-size: 0.9rem;
+    line-height: 1.8;
+}
+
+.equation span {
+    color: var(--muted);
+}
+
+.football-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 25px;
+}
+
+.football-tags span {
+    padding: 7px 10px;
+    border: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 0.68rem;
+    letter-spacing: 0.04em;
+}
+
+
+.football-mini-visual {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    margin-top: 35px;
+}
+
+.football-mini-visual span {
+    width: 28px;
+    height: 28px;
+    border: 1px solid var(--border-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.65rem;
+}
+
+.football-mini-visual i {
+    width: 45px;
+    height: 1px;
+    background: var(--border-light);
+}
+
+
+.zone-model {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 35px;
+    border: 1px solid var(--border);
+}
+
+.zone-model span {
+    padding: 16px 8px;
+    text-align: center;
+    border-right: 1px solid var(--border);
+    font-family: monospace;
+    font-size: 0.7rem;
+    color: var(--muted);
+}
+
+.zone-model span:last-child {
+    border-right: none;
+}
+
+
+.football-research {
+    margin-top: 18px;
+    padding: 35px;
+    border: 1px solid var(--border);
+    background: var(--surface);
+}
+
+.football-research h3 {
+    max-width: 650px;
+    margin: 0;
+    font-size: clamp(1.8rem, 4vw, 3rem);
+    letter-spacing: -0.04em;
+}
+
+.research-columns {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+    padding-top: 30px;
+    border-top: 1px solid var(--border);
+}
+
+.research-columns span {
+    font-size: 0.68rem;
+    letter-spacing: 0.14em;
+    color: var(--muted);
+}
+
+.research-columns p {
+    margin-top: 12px;
+    color: var(--muted);
+    line-height: 1.7;
+    font-size: 0.9rem;
+}
+
+
+/* Football mobile */
+
+@media (max-width: 800px) {
+
+    .football-hero {
+        grid-template-columns: 1fr;
+    }
+
+    .fsi-mark {
+        min-height: 150px;
+    }
+
+    .football-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .football-feature {
+        grid-column: span 1;
+    }
+
+    .research-columns {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+}
+```
 
 
 
