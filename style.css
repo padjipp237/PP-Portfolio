@@ -914,5 +914,62 @@ footer {
 
         gap: 12px;
     }
+
+   ```css
+/* =========================================================
+   JAVASCRIPT INTERACTION STATES
+   ========================================================= */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(25px);
+
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+}
+
+.reveal.revealed {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* Navbar after scrolling */
+
+.navbar.scrolled {
+    background: rgba(8, 8, 8, 0.95);
+}
+
+
+/* Active navigation item */
+
+.navbar nav a.active {
+    color: var(--text);
+}
+
+
+/* Stagger project cards */
+
+.project-card:nth-child(2) {
+    transition-delay: 0.08s;
+}
+
+.project-card:nth-child(3) {
+    transition-delay: 0.16s;
+}
+
+
+/* Stagger K9IQ cards */
+
+.k9-grid > div:nth-child(2) {
+    transition-delay: 0.08s;
+}
+
+.k9-grid > div:nth-child(3) {
+    transition-delay: 0.16s;
+}
+```
+
 }
 ```
