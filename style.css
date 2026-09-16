@@ -1477,6 +1477,227 @@ footer {
 }
 ```
 
+```css
+/* =========================
+   GLASS / TRANSPARENT PANELS
+========================= */
+
+:root {
+    --glass-bg: rgba(255, 255, 255, 0.025);
+    --glass-bg-hover: rgba(255, 255, 255, 0.045);
+    --glass-border: rgba(255, 255, 255, 0.08);
+}
+
+
+/* Journey */
+
+.timeline-content {
+    padding: 28px 30px;
+    border: 1px solid var(--glass-border);
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 10px;
+}
+
+.timeline-content:hover {
+    background: var(--glass-bg-hover);
+    border-color: rgba(255, 255, 255, 0.13);
+}
+
+
+/* Journey project boxes */
+
+.journey-projects {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-top: 25px;
+}
+
+.journey-projects > div {
+    padding: 16px;
+    border: 1px solid var(--glass-border);
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 8px;
+}
+
+.journey-projects strong {
+    display: block;
+    margin-bottom: 6px;
+}
+
+.journey-projects span {
+    color: var(--muted);
+    font-size: 0.75rem;
+}
+
+
+/* Project cards */
+
+.project-card {
+    border: 1px solid var(--glass-border);
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 10px;
+}
+
+.project-card:hover {
+    background: var(--glass-bg-hover);
+    border-color: rgba(255, 255, 255, 0.14);
+}
+
+
+/* Project technology pills */
+
+.project-tech span,
+.tags span,
+.football-tags span {
+    background: rgba(255, 255, 255, 0.035);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 999px;
+}
+
+
+/* GitHub panel */
+
+.github-callout {
+    border: 1px solid var(--glass-border);
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 10px;
+}
+
+
+/* Football cards */
+
+.football-card {
+    border: 1px solid var(--glass-border);
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 10px;
+}
+
+.football-card:hover {
+    background: var(--glass-bg-hover);
+    border-color: rgba(255, 255, 255, 0.14);
+}
+
+
+/* Football research panel */
+
+.football-research {
+    border: 1px solid var(--glass-border);
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 10px;
+}
+
+
+/* Football mini sections */
+
+.equation,
+.zone-model,
+.football-mini-visual {
+    background: rgba(0, 0, 0, 0.18);
+    border-radius: 6px;
+}
+
+
+/* K9IQ cards */
+
+.k9-grid > div {
+    border: 1px solid var(--glass-border);
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 10px;
+    padding: 28px;
+    transition:
+        background 0.3s ease,
+        border-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.k9-grid > div:hover {
+    background: var(--glass-bg-hover);
+    border-color: rgba(255, 255, 255, 0.14);
+    transform: translateY(-4px);
+}
+
+
+/* Real AnalytIX */
+
+.real-content {
+    padding: 35px;
+    border: 1px solid var(--glass-border);
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 10px;
+}
+
+
+/* Contact */
+
+.contact-section {
+    padding: 80px 30px;
+    margin-top: 40px;
+    border: 1px solid var(--glass-border);
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 10px;
+}
+
+
+/* More breathing room */
+
+.timeline {
+    gap: 35px;
+}
+
+.project-grid {
+    gap: 22px;
+}
+
+.football-grid {
+    gap: 22px;
+}
+
+.k9-grid {
+    gap: 22px;
+}
+
+
+/* Mobile */
+
+@media (max-width: 800px) {
+
+    .journey-projects {
+        grid-template-columns: 1fr;
+    }
+
+    .timeline-content {
+        padding: 22px;
+    }
+
+    .project-card,
+    .football-card,
+    .k9-grid > div {
+        padding: 22px;
+    }
+
+    .real-content {
+        padding: 25px;
+    }
+
+}
+```
 
 
 ```css
