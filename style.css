@@ -1371,6 +1371,486 @@ body::after {
 }
 
 /* =========================================
+   FOOTBALL ANALYTICS
+   ========================================= */
+
+.feature-section {
+    width: 100%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+
+    padding: 150px 40px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+
+    scroll-margin-top: 80px;
+}
+
+.feature-label {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    margin-bottom: 45px;
+
+    color: #666666;
+
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+}
+
+.feature-label span:first-child {
+    color: #444444;
+}
+
+.football-hero {
+    max-width: 900px;
+
+    margin-bottom: 70px;
+}
+
+.football-kicker {
+    margin-bottom: 18px;
+
+    color: #777777;
+
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+}
+
+.football-hero h2 {
+    margin-bottom: 24px;
+
+    color: #f2f2f2;
+
+    font-size: clamp(42px, 7vw, 82px);
+    font-weight: 600;
+    line-height: 0.98;
+    letter-spacing: -0.05em;
+}
+
+.football-hero p {
+    max-width: 680px;
+
+    color: #858585;
+
+    font-size: 15px;
+    line-height: 1.9;
+}
+
+
+/* =========================================
+   FSI MARK
+   ========================================= */
+
+.fsi-mark {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 32px;
+    padding: 10px 14px;
+
+    background: rgba(255, 255, 255, 0.025);
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 5px;
+
+    color: #bdbdbd;
+
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+}
+
+
+/* =========================================
+   FOOTBALL RESEARCH CARDS
+   ========================================= */
+
+.football-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+
+    margin-bottom: 18px;
+}
+
+.football-card {
+    position: relative;
+
+    min-height: 260px;
+
+    padding: 28px;
+
+    background: rgba(255, 255, 255, 0.022);
+
+    border: 1px solid rgba(255, 255, 255, 0.075);
+    border-radius: 10px;
+
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+
+    transition:
+        background 0.25s ease,
+        border-color 0.25s ease,
+        transform 0.25s ease;
+}
+
+.football-card:hover {
+    background: rgba(255, 255, 255, 0.04);
+
+    border-color: rgba(255, 255, 255, 0.14);
+
+    transform: translateY(-3px);
+}
+
+.football-card-number {
+    color: #4f4f4f;
+
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+}
+
+.football-card h3 {
+    margin-top: 55px;
+    margin-bottom: 13px;
+
+    color: #e6e6e6;
+
+    font-size: 21px;
+    font-weight: 600;
+    letter-spacing: -0.025em;
+}
+
+.football-card p {
+    max-width: 500px;
+
+    color: #777777;
+
+    font-size: 13px;
+    line-height: 1.75;
+}
+
+
+/* =========================================
+   RESEARCH DIRECTION
+   ========================================= */
+
+.football-research {
+    padding: 30px;
+
+    background: rgba(255, 255, 255, 0.018);
+
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: 10px;
+
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+.football-research-header {
+    margin-bottom: 35px;
+}
+
+.football-research-header span {
+    color: #555555;
+
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+}
+
+.football-research-header h3 {
+    margin-top: 9px;
+
+    color: #eeeeee;
+
+    font-size: 25px;
+    font-weight: 600;
+    letter-spacing: -0.03em;
+}
+
+.football-research-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+
+.football-research-column {
+    padding: 22px;
+
+    background: rgba(255, 255, 255, 0.018);
+
+    border: 1px solid rgba(255, 255, 255, 0.055);
+    border-radius: 7px;
+}
+
+.football-research-column h4 {
+    margin-bottom: 10px;
+
+    color: #cccccc;
+
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.football-research-column p {
+    color: #707070;
+
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   FOOTBALL VISUAL ELEMENTS
+   ========================================= */
+
+.equation,
+.zone-model,
+.football-mini-visual {
+    background: rgba(255, 255, 255, 0.018);
+
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 7px;
+}
+
+
+/* =========================================
+   FOOTBALL — MOBILE
+   ========================================= */
+
+@media (max-width: 768px) {
+
+    .feature-section {
+        padding: 110px 20px;
+    }
+
+    .football-hero {
+        margin-bottom: 50px;
+    }
+
+    .football-hero h2 {
+        font-size: clamp(40px, 12vw, 64px);
+    }
+
+    .football-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .football-card {
+        min-height: 230px;
+        padding: 24px;
+    }
+
+    .football-card h3 {
+        margin-top: 45px;
+    }
+
+    .football-research {
+        padding: 22px;
+    }
+
+    .football-research-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* =========================================
+   K9IQ
+   ========================================= */
+
+#k9iq {
+    position: relative;
+}
+
+.k9-intro {
+    max-width: 700px;
+
+    margin-bottom: 55px;
+
+    color: #858585;
+
+    font-size: 15px;
+    line-height: 1.9;
+}
+
+.k9-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.k9-grid > div {
+    position: relative;
+
+    min-height: 300px;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 28px;
+
+    background: rgba(255, 255, 255, 0.022);
+
+    border: 1px solid rgba(255, 255, 255, 0.075);
+    border-radius: 10px;
+
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+
+    overflow: hidden;
+
+    transition:
+        background 0.25s ease,
+        border-color 0.25s ease,
+        transform 0.25s ease;
+}
+
+.k9-grid > div::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 1px;
+
+    background: rgba(255, 255, 255, 0.12);
+}
+
+.k9-grid > div:hover {
+    background: rgba(255, 255, 255, 0.04);
+
+    border-color: rgba(255, 255, 255, 0.14);
+
+    transform: translateY(-3px);
+}
+
+.k9-grid > div span {
+    color: #555555;
+
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+.k9-grid > div h3 {
+    margin-top: 55px;
+    margin-bottom: 14px;
+
+    color: #eeeeee;
+
+    font-size: 23px;
+    font-weight: 600;
+    letter-spacing: -0.03em;
+}
+
+.k9-grid > div p {
+    color: #777777;
+
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.k9-grid > div .k9-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+
+    margin-top: auto;
+    padding-top: 25px;
+}
+
+.k9-grid > div .k9-tags span {
+    padding: 5px 8px;
+
+    color: #707070;
+
+    background: rgba(255, 255, 255, 0.025);
+
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 4px;
+
+    font-size: 8px;
+    letter-spacing: 0.07em;
+}
+
+
+/* =========================================
+   K9IQ — SMALL DATA STRIP
+   ========================================= */
+
+.k9-data-strip {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+
+    margin-top: 16px;
+}
+
+.k9-data-strip > div {
+    padding: 18px 20px;
+
+    background: rgba(255, 255, 255, 0.015);
+
+    border: 1px solid rgba(255, 255, 255, 0.055);
+    border-radius: 7px;
+}
+
+.k9-data-strip strong {
+    display: block;
+
+    margin-bottom: 4px;
+
+    color: #cccccc;
+
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.k9-data-strip span {
+    color: #626262;
+
+    font-size: 10px;
+}
+
+
+/* =========================================
+   K9IQ — MOBILE
+   ========================================= */
+
+@media (max-width: 768px) {
+
+    .k9-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .k9-grid > div {
+        min-height: 270px;
+        padding: 24px;
+    }
+
+    .k9-grid > div h3 {
+        margin-top: 45px;
+    }
+
+    .k9-data-strip {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* =========================================
    NAVIGATION + HERO — MOBILE
    ========================================= */
 
