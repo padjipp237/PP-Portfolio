@@ -19,9 +19,9 @@ document.addEventListener("DOMContentLoaded", () => {
        ----------------------------------------------------- */
 
     const revealElements = document.querySelectorAll(
-        ".section, .feature-section, .project-card, .timeline-item, .k9-grid > div"
-    );
-
+    ".section, .feature-section, .project-card, .timeline-item, .k9-grid > .k9-card"
+);
+   
     if ("IntersectionObserver" in window) {
 
         const revealObserver = new IntersectionObserver(
