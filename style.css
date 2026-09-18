@@ -4207,3 +4207,574 @@ footer {
     }
 
 }
+
+/* =========================================================
+   REAL ANALYTIX — PLATFORM HIERARCHY
+   ========================================================= */
+
+.real-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    padding-bottom: 45px;
+
+    border-bottom: 1px solid var(--line);
+}
+
+
+.real-logo {
+    margin-top: 25px;
+
+    color: var(--text);
+
+    font-family:
+        "SFMono-Regular",
+        Consolas,
+        "Liberation Mono",
+        monospace;
+
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+}
+
+
+.real-logo span {
+    color: var(--text-muted);
+}
+
+
+.real-header h2 {
+    margin: 10px 0 0;
+
+    font-size: clamp(2.8rem, 6vw, 5.5rem);
+    line-height: 0.95;
+    letter-spacing: -0.055em;
+}
+
+
+.real-index {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    text-align: right;
+}
+
+
+.real-index span,
+.real-index small {
+    font-family:
+        "SFMono-Regular",
+        Consolas,
+        "Liberation Mono",
+        monospace;
+}
+
+
+.real-index span {
+    color: var(--text-soft);
+
+    font-size: 0.6rem;
+    letter-spacing: 0.1em;
+}
+
+
+.real-index small {
+    margin-top: 12px;
+
+    color: var(--text-muted);
+
+    font-size: 0.48rem;
+    line-height: 1.6;
+    letter-spacing: 0.08em;
+}
+
+
+/* =========================================================
+   PLATFORM STATEMENT
+   ========================================================= */
+
+.real-main {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+
+    gap: 80px;
+
+    margin-top: 70px;
+}
+
+
+.real-statement {
+    max-width: 600px;
+}
+
+
+.real-label {
+    display: block;
+
+    margin-bottom: 18px;
+
+    color: var(--text-muted);
+
+    font-family:
+        "SFMono-Regular",
+        Consolas,
+        "Liberation Mono",
+        monospace;
+
+    font-size: 0.55rem;
+    letter-spacing: 0.12em;
+}
+
+
+.real-statement h3 {
+    margin: 0 0 22px;
+
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    line-height: 1;
+    letter-spacing: -0.045em;
+}
+
+
+.real-statement p {
+    margin: 0;
+
+    max-width: 560px;
+}
+
+
+.real-pillars {
+    border-top: 1px solid var(--line);
+}
+
+
+.real-pillar {
+    display: grid;
+    grid-template-columns: 45px 1fr;
+
+    gap: 20px;
+
+    padding: 20px 0;
+
+    border-bottom: 1px solid var(--line);
+}
+
+
+.real-pillar > span {
+    color: var(--text-muted);
+
+    font-family:
+        "SFMono-Regular",
+        Consolas,
+        "Liberation Mono",
+        monospace;
+
+    font-size: 0.55rem;
+}
+
+
+.real-pillar strong {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: var(--text-soft);
+
+    font-family:
+        "SFMono-Regular",
+        Consolas,
+        "Liberation Mono",
+        monospace;
+
+    font-size: 0.65rem;
+    letter-spacing: 0.08em;
+}
+
+
+.real-pillar p {
+    margin: 0;
+
+    font-size: 0.78rem;
+}
+
+
+/* =========================================================
+   PLATFORM SYSTEM MODEL
+   ========================================================= */
+
+.real-system {
+    margin-top: 80px;
+
+    background: var(--glass-bg);
+
+    border: 1px solid var(--line-strong);
+    border-radius: var(--radius);
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    overflow: hidden;
+}
+
+
+.real-system-top {
+    display: flex;
+    justify-content: space-between;
+
+    padding: 13px 20px;
+
+    border-bottom: 1px solid var(--line);
+
+    color: var(--text-muted);
+
+    font-family:
+        "SFMono-Regular",
+        Consolas,
+        "Liberation Mono",
+        monospace;
+
+    font-size: 0.52rem;
+    letter-spacing: 0.1em;
+}
+
+
+.real-flow {
+    display: grid;
+    grid-template-columns: 1fr minmax(30px, 0.3fr) 1fr minmax(30px, 0.3fr) 1fr minmax(30px, 0.3fr) 1fr;
+
+    align-items: center;
+}
+
+
+.real-flow-item {
+    display: flex;
+    flex-direction: column;
+
+    padding: 35px 25px;
+}
+
+
+.real-flow-item span {
+    margin-bottom: 10px;
+
+    color: var(--text-muted);
+
+    font-family:
+        "SFMono-Regular",
+        Consolas,
+        "Liberation Mono",
+        monospace;
+
+    font-size: 0.5rem;
+}
+
+
+.real-flow-item strong {
+    margin-bottom: 6px;
+
+    color: var(--text);
+
+    font-family:
+        "SFMono-Regular",
+        Consolas,
+        "Liberation Mono",
+        monospace;
+
+    font-size: 0.7rem;
+    letter-spacing: 0.08em;
+}
+
+
+.real-flow-item small {
+    color: var(--text-muted);
+
+    font-size: 0.65rem;
+}
+
+
+.real-flow-line {
+    height: 1px;
+
+    background: var(--line-strong);
+}
+
+
+/* =========================================================
+   APPLICATION AREAS
+   ========================================================= */
+
+.real-applications {
+    margin-top: 55px;
+
+    border: 1px solid var(--line);
+
+    border-radius: var(--radius-sm);
+}
+
+
+.real-applications-header {
+    display: flex;
+    justify-content: space-between;
+
+    padding: 13px 18px;
+
+    border-bottom: 1px solid var(--line);
+
+    color: var(--text-muted);
+
+    font-family:
+        "SFMono-Regular",
+        Consolas,
+        "Liberation Mono",
+        monospace;
+
+    font-size: 0.5rem;
+    letter-spacing: 0.09em;
+}
+
+
+.real-application-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+
+.real-application {
+    display: grid;
+    grid-template-columns: 35px 1fr auto;
+
+    align-items: center;
+
+    gap: 15px;
+
+    min-height: 90px;
+
+    padding: 18px 20px;
+
+    border-bottom: 1px solid var(--line);
+
+    color: var(--text);
+
+    text-decoration: none;
+
+    transition:
+        background var(--transition),
+        border-color var(--transition);
+}
+
+
+.real-application:nth-child(odd) {
+    border-right: 1px solid var(--line);
+}
+
+
+.real-application:nth-last-child(-n + 2) {
+    border-bottom: 0;
+}
+
+
+.real-application:hover {
+    background: var(--glass-bg-hover);
+}
+
+
+.real-application > span {
+    color: var(--text-muted);
+
+    font-family:
+        "SFMono-Regular",
+        Consolas,
+        "Liberation Mono",
+        monospace;
+
+    font-size: 0.5rem;
+}
+
+
+.real-application strong {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: var(--text-soft);
+
+    font-family:
+        "SFMono-Regular",
+        Consolas,
+        "Liberation Mono",
+        monospace;
+
+    font-size: 0.6rem;
+    letter-spacing: 0.08em;
+}
+
+
+.real-application small {
+    color: var(--text-muted);
+
+    font-size: 0.63rem;
+}
+
+
+.real-application b {
+    color: var(--text-muted);
+
+    font-weight: 400;
+}
+
+
+.real-application-future {
+    cursor: default;
+}
+
+
+.real-application-future:hover {
+    background: transparent;
+}
+
+
+/* =========================================================
+   PLATFORM FOOTER
+   ========================================================= */
+
+.real-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    gap: 30px;
+
+    margin-top: 25px;
+}
+
+
+.real-footer p {
+    margin: 0;
+
+    max-width: 600px;
+}
+
+
+.real-footer a {
+    flex-shrink: 0;
+
+    color: var(--text-soft);
+
+    text-decoration: none;
+
+    font-family:
+        "SFMono-Regular",
+        Consolas,
+        "Liberation Mono",
+        monospace;
+
+    font-size: 0.6rem;
+    letter-spacing: 0.05em;
+}
+
+
+.real-footer a:hover {
+    color: var(--text);
+}
+
+
+/* =========================================================
+   REAL ANALYTIX — RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 800px) {
+
+    .real-header {
+        align-items: flex-start;
+    }
+
+
+    .real-main {
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+
+        margin-top: 50px;
+    }
+
+
+    .real-flow {
+        grid-template-columns: 1fr;
+    }
+
+
+    .real-flow-line {
+        width: 1px;
+        height: 20px;
+
+        margin-left: 25px;
+    }
+
+
+    .real-flow-item {
+        padding: 22px 25px;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .real-header {
+        flex-direction: column;
+
+        gap: 35px;
+    }
+
+
+    .real-index {
+        align-items: flex-start;
+
+        text-align: left;
+    }
+
+
+    .real-header h2 {
+        font-size: 3rem;
+    }
+
+
+    .real-system {
+        margin-top: 55px;
+    }
+
+
+    .real-application-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .real-application:nth-child(odd) {
+        border-right: 0;
+    }
+
+
+    .real-application:nth-child(3) {
+        border-bottom: 1px solid var(--line);
+    }
+
+
+    .real-application:nth-last-child(-n + 2) {
+        border-bottom: 1px solid var(--line);
+    }
+
+
+    .real-application:last-child {
+        border-bottom: 0;
+    }
+
+
+    .real-footer {
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+}
