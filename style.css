@@ -3039,3 +3039,161 @@ footer {
     }
 
 }
+
+/* =========================================================
+   PROJECTS — ADDITIONAL HIERARCHY
+   ========================================================= */
+
+.project-category {
+    position: relative;
+}
+
+
+.project-category + .project-category {
+    padding-top: 10px;
+}
+
+
+.project-category-header {
+    position: relative;
+
+    padding-left: 14px;
+}
+
+
+.project-category-header::before {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    top: 50%;
+
+    width: 3px;
+    height: 14px;
+
+    background: var(--text);
+
+    transform: translateY(-50%);
+}
+
+
+.project-category-header span:first-child {
+    color: var(--text-soft);
+}
+
+
+/* Featured project gets stronger visual hierarchy */
+
+.featured-project {
+    position: relative;
+
+    border-color: var(--line-strong);
+}
+
+
+.featured-project::before {
+    content: "PRIMARY PROJECT";
+
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    padding: 8px 12px;
+
+    border-left: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+
+    color: var(--text-muted);
+
+    font-family:
+        "SFMono-Regular",
+        Consolas,
+        "Liberation Mono",
+        monospace;
+
+    font-size: 0.5rem;
+    letter-spacing: 0.08em;
+}
+
+
+.featured-project .project-number {
+    color: var(--text-soft);
+}
+
+
+.featured-project .project-type {
+    color: var(--text-soft);
+}
+
+
+/* Make project links feel more interactive */
+
+.project-link {
+    position: relative;
+
+    display: inline-flex;
+    align-items: center;
+
+    padding-bottom: 4px;
+}
+
+
+.project-link::after {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    width: 0;
+    height: 1px;
+
+    background: var(--text);
+
+    transition: width var(--transition);
+}
+
+
+.project-link:hover::after {
+    width: 100%;
+}
+
+
+/* Project cards have a small technical index */
+
+.project-card {
+    position: relative;
+}
+
+
+.project-card:not(.featured-project)::after {
+    content: "";
+
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+
+    width: 4px;
+    height: 4px;
+
+    border-radius: 50%;
+
+    background: var(--text-muted);
+
+    opacity: 0.6;
+}
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    .featured-project::before {
+        position: static;
+
+        display: inline-block;
+
+        margin: -21px -21px 25px auto;
+    }
+
+}
