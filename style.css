@@ -3189,6 +3189,106 @@ footer {
     letter-spacing: 0.08em;
 }
 
+/* =========================================================
+   NAVBAR — FINAL
+   ========================================================= */
+
+.navbar .logo {
+    display: inline-flex;
+    align-items: center;
+    color: var(--text);
+    font-family: monospace;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: -0.04em;
+}
+
+.navbar .logo::after {
+    content: "/";
+    margin-left: 7px;
+    color: var(--text-muted);
+    font-weight: 400;
+}
+
+.navbar nav {
+    display: flex;
+    align-items: center;
+    gap: 26px;
+}
+
+.navbar nav a {
+    position: relative;
+    color: var(--text-muted);
+    font-family: monospace;
+    font-size: 0.68rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.navbar nav a:hover,
+.navbar nav a.active {
+    color: var(--text);
+}
+
+.navbar nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    width: 0;
+    height: 1px;
+    background: var(--text);
+    transition: width var(--transition);
+}
+
+.navbar nav a:hover::after,
+.navbar nav a.active::after {
+    width: 100%;
+}
+
+@media (max-width: 900px) {
+
+    .navbar {
+        padding-left: 22px;
+        padding-right: 22px;
+    }
+
+    .navbar nav {
+        gap: 16px;
+    }
+
+    .navbar nav a {
+        font-size: 0.62rem;
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .navbar {
+        height: auto;
+        min-height: 76px;
+        padding-top: 18px;
+        padding-bottom: 18px;
+    }
+
+    .navbar nav {
+        max-width: calc(100vw - 90px);
+        overflow-x: auto;
+        justify-content: flex-start;
+        scrollbar-width: none;
+    }
+
+    .navbar nav::-webkit-scrollbar {
+        display: none;
+    }
+
+    .navbar nav a {
+        flex-shrink: 0;
+    }
+
+}
 
 /* ---------------------------------------------------------
    Featured Responsive
