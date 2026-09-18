@@ -3250,3 +3250,513 @@ footer {
     }
 
 }
+
+/* =========================================================
+   FOOTBALL — RESEARCH HIERARCHY
+   ========================================================= */
+
+.football-intro {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+
+    gap: 70px;
+
+    margin-bottom: 70px;
+}
+
+
+.football-intro-main {
+    max-width: 520px;
+}
+
+
+.football-intro-main .research-label {
+    display: block;
+
+    margin-bottom: 18px;
+
+    color: var(--text-muted);
+
+    font-family:
+        "SFMono-Regular",
+        Consolas,
+        "Liberation Mono",
+        monospace;
+
+    font-size: 0.55rem;
+    letter-spacing: 0.12em;
+}
+
+
+.football-intro-main h3 {
+    margin: 0;
+
+    font-size: clamp(2rem, 4vw, 3.4rem);
+    line-height: 1.02;
+    letter-spacing: -0.04em;
+}
+
+
+.football-intro-copy {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    max-width: 560px;
+}
+
+
+.football-intro-copy p {
+    margin: 0;
+}
+
+
+.football-intro-copy p + p {
+    margin-top: 18px;
+}
+
+
+.football-card {
+    position: relative;
+
+    min-height: 300px;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 26px;
+
+    background: var(--glass-bg);
+
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius);
+
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    transition:
+        background var(--transition),
+        border-color var(--transition),
+        transform var(--transition);
+}
+
+
+.football-card:hover {
+    background: var(--glass-bg-hover);
+    border-color: var(--line-strong);
+
+    transform: translateY(-3px);
+}
+
+
+.football-card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 35px;
+}
+
+
+.football-card-code {
+    color: var(--text-muted);
+
+    font-family:
+        "SFMono-Regular",
+        Consolas,
+        "Liberation Mono",
+        monospace;
+
+    font-size: 0.5rem;
+    letter-spacing: 0.1em;
+}
+
+
+.football-card-icon {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 25px;
+
+    border: 1px solid var(--line-strong);
+    border-radius: var(--radius-sm);
+
+    color: var(--text-soft);
+
+    font-family:
+        "SFMono-Regular",
+        Consolas,
+        "Liberation Mono",
+        monospace;
+
+    font-size: 0.9rem;
+}
+
+
+.football-card h3 {
+    margin: 0 0 12px;
+}
+
+
+.football-card p {
+    margin: 0;
+
+    max-width: 430px;
+}
+
+
+.football-card-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+
+    margin-top: auto;
+    padding-top: 25px;
+}
+
+
+.football-card-tags span {
+    padding: 6px 9px;
+
+    border: 1px solid var(--line);
+
+    border-radius: 999px;
+
+    color: var(--text-muted);
+
+    font-family:
+        "SFMono-Regular",
+        Consolas,
+        "Liberation Mono",
+        monospace;
+
+    font-size: 0.48rem;
+    letter-spacing: 0.05em;
+}
+
+
+/* =========================================================
+   FSI RESEARCH PANEL
+   ========================================================= */
+
+.football-research {
+    margin-top: 80px;
+
+    border: 1px solid var(--line-strong);
+    border-radius: var(--radius);
+
+    background: var(--glass-bg);
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    overflow: hidden;
+}
+
+
+.research-label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 13px 20px;
+
+    border-bottom: 1px solid var(--line);
+
+    color: var(--text-muted);
+
+    font-family:
+        "SFMono-Regular",
+        Consolas,
+        "Liberation Mono",
+        monospace;
+
+    font-size: 0.52rem;
+    letter-spacing: 0.1em;
+}
+
+
+.research-content {
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(320px, 0.9fr);
+
+    gap: 60px;
+
+    padding: 45px;
+}
+
+
+.research-copy {
+    max-width: 620px;
+}
+
+
+.research-code {
+    display: block;
+
+    margin-bottom: 15px;
+
+    color: var(--text-muted);
+
+    font-family:
+        "SFMono-Regular",
+        Consolas,
+        "Liberation Mono",
+        monospace;
+
+    font-size: 0.55rem;
+    letter-spacing: 0.1em;
+}
+
+
+.research-copy h3 {
+    margin: 0 0 20px;
+
+    max-width: 580px;
+
+    font-size: clamp(1.8rem, 3vw, 2.7rem);
+    line-height: 1.05;
+    letter-spacing: -0.035em;
+}
+
+
+.research-copy p {
+    margin: 0;
+
+    max-width: 600px;
+}
+
+
+.research-model {
+    align-self: center;
+
+    border: 1px solid var(--line);
+
+    background: rgba(0, 0, 0, 0.16);
+}
+
+
+.model-header {
+    display: flex;
+    justify-content: space-between;
+
+    padding: 11px 15px;
+
+    border-bottom: 1px solid var(--line);
+
+    color: var(--text-muted);
+
+    font-family:
+        "SFMono-Regular",
+        Consolas,
+        "Liberation Mono",
+        monospace;
+
+    font-size: 0.48rem;
+    letter-spacing: 0.08em;
+}
+
+
+.research-equation {
+    padding: 35px 25px;
+
+    border-bottom: 1px solid var(--line);
+
+    text-align: center;
+
+    color: var(--text);
+
+    font-family:
+        "SFMono-Regular",
+        Consolas,
+        "Liberation Mono",
+        monospace;
+
+    font-size: clamp(1rem, 2vw, 1.4rem);
+    letter-spacing: 0.03em;
+}
+
+
+.model-variables {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+
+.model-variables div {
+    display: flex;
+    flex-direction: column;
+
+    padding: 17px;
+
+    border-bottom: 1px solid var(--line);
+}
+
+
+.model-variables div:nth-child(odd) {
+    border-right: 1px solid var(--line);
+}
+
+
+.model-variables div:nth-last-child(-n + 2) {
+    border-bottom: 0;
+}
+
+
+.model-variables span {
+    margin-bottom: 5px;
+
+    color: var(--text-soft);
+
+    font-family:
+        "SFMono-Regular",
+        Consolas,
+        "Liberation Mono",
+        monospace;
+
+    font-size: 0.7rem;
+}
+
+
+.model-variables small {
+    color: var(--text-muted);
+
+    font-size: 0.65rem;
+}
+
+
+.research-status {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+
+    padding: 15px 20px;
+
+    border-top: 1px solid var(--line);
+
+    color: var(--text-muted);
+
+    font-family:
+        "SFMono-Regular",
+        Consolas,
+        "Liberation Mono",
+        monospace;
+
+    font-size: 0.48rem;
+    letter-spacing: 0.08em;
+}
+
+
+.research-status strong {
+    color: var(--text-soft);
+
+    font-weight: 400;
+}
+
+
+.football-footer {
+    display: flex;
+    justify-content: space-between;
+
+    margin-top: 22px;
+
+    color: var(--text-muted);
+
+    font-family:
+        "SFMono-Regular",
+        Consolas,
+        "Liberation Mono",
+        monospace;
+
+    font-size: 0.5rem;
+    letter-spacing: 0.08em;
+}
+
+
+/* =========================================================
+   FOOTBALL — RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 800px) {
+
+    .football-intro {
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+
+        margin-bottom: 50px;
+    }
+
+
+    .research-content {
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+
+        padding: 30px;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .football-intro-main h3 {
+        font-size: 2.2rem;
+    }
+
+
+    .football-card {
+        min-height: 270px;
+
+        padding: 22px;
+    }
+
+
+    .football-research {
+        margin-top: 55px;
+    }
+
+
+    .research-content {
+        padding: 22px;
+    }
+
+
+    .research-status {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+
+    .football-footer {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+}
+
+
+@media (max-width: 420px) {
+
+    .model-variables {
+        grid-template-columns: 1fr;
+    }
+
+
+    .model-variables div:nth-child(odd) {
+        border-right: 0;
+    }
+
+
+    .model-variables div:nth-last-child(2) {
+        border-bottom: 1px solid var(--line);
+    }
+
+}
