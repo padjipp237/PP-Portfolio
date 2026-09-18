@@ -2154,6 +2154,297 @@ h3,
     color: var(--text-muted);
 }
 
+ /* =========================================================
+    REAL ANALYTIX
+    ========================================================= */
+
+.real-section {
+    padding-top: 130px;
+    padding-bottom: 130px;
+}
+
+
+/* ---------------------------------------------------------
+   Header
+   --------------------------------------------------------- */
+
+.real-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 40px;
+    padding-bottom: 55px;
+    border-bottom: 1px solid var(--line);
+}
+
+.real-logo {
+    margin-top: 25px;
+    font-family: monospace;
+    font-size: clamp(4rem, 10vw, 8rem);
+    font-weight: 700;
+    line-height: 0.8;
+    letter-spacing: -0.09em;
+}
+
+.real-logo span {
+    color: var(--text-muted);
+}
+
+.real-header h2 {
+    margin-top: 30px;
+    color: var(--text-soft);
+    font-family: monospace;
+    font-size: 0.85rem;
+    font-weight: 400;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+}
+
+.real-index {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    min-width: 130px;
+    color: var(--text-muted);
+    font-family: monospace;
+    font-size: 0.62rem;
+    letter-spacing: 0.07em;
+}
+
+.real-index small {
+    line-height: 1.5;
+}
+
+
+/* ---------------------------------------------------------
+   Main Content
+   --------------------------------------------------------- */
+
+.real-main {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(300px, 0.9fr);
+    gap: 80px;
+    padding: 65px 0;
+}
+
+.real-label {
+    display: block;
+    margin-bottom: 18px;
+    color: var(--text-muted);
+    font-family: monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.1em;
+}
+
+.real-statement h3 {
+    max-width: 650px;
+    margin-bottom: 22px;
+    font-size: clamp(2rem, 5vw, 4rem);
+    line-height: 1;
+    letter-spacing: -0.05em;
+}
+
+.real-statement p {
+    max-width: 620px;
+    color: var(--text-soft);
+    line-height: 1.85;
+}
+
+
+/* ---------------------------------------------------------
+   Pillars
+   --------------------------------------------------------- */
+
+.real-pillars {
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid var(--line);
+}
+
+.real-pillar {
+    display: grid;
+    grid-template-columns: 45px 1fr;
+    gap: 18px;
+    padding: 20px 0;
+    border-bottom: 1px solid var(--line);
+}
+
+.real-pillar > span {
+    color: var(--text-muted);
+    font-family: monospace;
+    font-size: 0.65rem;
+}
+
+.real-pillar strong {
+    display: block;
+    margin-bottom: 7px;
+    font-family: monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+}
+
+.real-pillar p {
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    line-height: 1.6;
+}
+
+
+/* ---------------------------------------------------------
+   System Model
+   --------------------------------------------------------- */
+
+.real-system {
+    padding: 30px;
+    border: 1px solid var(--glass-border);
+    background: var(--glass-bg);
+    border-radius: var(--radius);
+}
+
+.real-system-top {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 25px;
+    border-bottom: 1px solid var(--line);
+    color: var(--text-muted);
+    font-family: monospace;
+    font-size: 0.62rem;
+    letter-spacing: 0.08em;
+}
+
+.real-flow {
+    display: grid;
+    grid-template-columns: 1fr 50px 1fr 50px 1fr 50px 1fr;
+    align-items: center;
+    gap: 12px;
+    padding-top: 35px;
+}
+
+.real-flow-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.real-flow-item span {
+    margin-bottom: 12px;
+    color: var(--text-muted);
+    font-family: monospace;
+    font-size: 0.62rem;
+}
+
+.real-flow-item strong {
+    margin-bottom: 6px;
+    font-family: monospace;
+    font-size: 0.75rem;
+    letter-spacing: 0.05em;
+}
+
+.real-flow-item small {
+    color: var(--text-muted);
+    font-size: 0.7rem;
+}
+
+.real-flow-line {
+    height: 1px;
+    background: var(--line-strong);
+}
+
+
+/* ---------------------------------------------------------
+   Footer
+   --------------------------------------------------------- */
+
+.real-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    margin-top: 12px;
+    padding: 25px 30px;
+    border: 1px solid var(--glass-border);
+    background: var(--glass-bg);
+    border-radius: var(--radius);
+}
+
+.real-footer p {
+    max-width: 650px;
+    color: var(--text-muted);
+    font-size: 0.78rem;
+    line-height: 1.7;
+}
+
+.real-footer a {
+    flex-shrink: 0;
+    color: var(--text);
+    font-family: monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.04em;
+}
+
+
+/* ---------------------------------------------------------
+   Responsive
+   --------------------------------------------------------- */
+
+@media (max-width: 900px) {
+
+    .real-main {
+        grid-template-columns: 1fr;
+        gap: 55px;
+    }
+
+    .real-flow {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .real-flow-line {
+        width: 30px;
+    }
+
+}
+
+
+@media (max-width: 800px) {
+
+    .real-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .real-index {
+        display: none;
+    }
+
+    .real-footer {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+}
+
+
+@media (max-width: 520px) {
+
+    .real-section {
+        padding-top: 90px;
+        padding-bottom: 90px;
+    }
+
+    .real-logo {
+        font-size: 5rem;
+    }
+
+    .real-main {
+        padding: 45px 0;
+    }
+
+    .real-system,
+    .real-footer {
+        padding: 22px;
+    }
+
+}
 
 /* =========================================================
    16 — CONTACT
