@@ -3197,3 +3197,56 @@ footer {
     }
 
 }
+
+/* =========================================================
+   PROJECTS — HEADER
+   ========================================================= */
+
+#projects .section-heading {
+    position: relative;
+
+    padding-bottom: 45px;
+
+    border-bottom: 1px solid var(--line);
+}
+
+
+#projects .section-heading::after {
+    content: "10 PROJECTS / 04 DOMAINS";
+
+    position: absolute;
+    right: 0;
+    bottom: 14px;
+
+    color: var(--text-muted);
+
+    font-family:
+        "SFMono-Regular",
+        Consolas,
+        "Liberation Mono",
+        monospace;
+
+    font-size: 0.55rem;
+    letter-spacing: 0.08em;
+}
+
+
+#projects .section-intro {
+    max-width: 650px;
+}
+
+
+@media (max-width: 600px) {
+
+    #projects .section-heading {
+        padding-bottom: 55px;
+    }
+
+
+    #projects .section-heading::after {
+        left: 0;
+        right: auto;
+        bottom: 15px;
+    }
+
+}
