@@ -1836,6 +1836,236 @@ h3,
     line-height: 1.8;
 }
 
+ /* =========================================================
+    K9IQ SYSTEM
+    ========================================================= */
+
+.k9-section {
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
+
+/* ---------------------------------------------------------
+   Introduction
+   --------------------------------------------------------- */
+
+.k9-intro {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(300px, 0.8fr);
+    gap: 70px;
+    align-items: end;
+    max-width: 1050px;
+    margin-top: 60px;
+    margin-bottom: 55px;
+}
+
+.k9-label {
+    display: block;
+    margin-bottom: 15px;
+    color: var(--text-muted);
+    font-family: monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.1em;
+}
+
+.k9-intro h3 {
+    max-width: 600px;
+    font-size: clamp(1.8rem, 4vw, 3rem);
+    line-height: 1.05;
+    letter-spacing: -0.04em;
+}
+
+.k9-intro p {
+    color: var(--text-soft);
+    line-height: 1.8;
+}
+
+
+/* ---------------------------------------------------------
+   K9 Cards
+   --------------------------------------------------------- */
+
+.k9-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+.k9-card {
+    display: flex;
+    flex-direction: column;
+    min-height: 300px;
+    padding: 25px;
+    border: 1px solid var(--glass-border);
+    background: var(--glass-bg);
+    border-radius: var(--radius);
+    transition:
+        transform var(--transition),
+        border-color var(--transition),
+        background var(--transition);
+}
+
+.k9-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--line-strong);
+    background: var(--glass-bg-hover);
+}
+
+.k9-card-top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 65px;
+    color: var(--text-muted);
+    font-family: monospace;
+    font-size: 0.62rem;
+    letter-spacing: 0.08em;
+}
+
+.k9-card h3 {
+    margin-bottom: 12px;
+    font-size: 1.1rem;
+}
+
+.k9-card p {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    line-height: 1.7;
+}
+
+.k9-card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+    padding-top: 25px;
+    color: var(--text-muted);
+    font-family: monospace;
+    font-size: 0.58rem;
+    letter-spacing: 0.08em;
+}
+
+
+/* ---------------------------------------------------------
+   K9IQ System Flow
+   --------------------------------------------------------- */
+
+.k9-system {
+    margin-top: 12px;
+    padding: 30px;
+    border: 1px solid var(--glass-border);
+    background: var(--glass-bg);
+    border-radius: var(--radius);
+}
+
+.k9-system-header {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 22px;
+    border-bottom: 1px solid var(--line);
+    color: var(--text-muted);
+    font-family: monospace;
+    font-size: 0.63rem;
+    letter-spacing: 0.08em;
+}
+
+.k9-system-flow {
+    display: grid;
+    grid-template-columns: 1fr 40px 1fr 40px 1fr;
+    align-items: center;
+    gap: 15px;
+    padding-top: 30px;
+}
+
+.k9-system-flow > div:not(.k9-arrow) {
+    display: flex;
+    flex-direction: column;
+}
+
+.k9-system-flow strong {
+    margin-bottom: 8px;
+    color: var(--text-muted);
+    font-family: monospace;
+    font-size: 0.65rem;
+}
+
+.k9-system-flow span {
+    margin-bottom: 7px;
+    font-family: monospace;
+    font-size: 0.75rem;
+    letter-spacing: 0.05em;
+}
+
+.k9-system-flow small {
+    color: var(--text-muted);
+    font-size: 0.7rem;
+}
+
+.k9-arrow {
+    color: var(--text-muted);
+    font-family: monospace;
+    text-align: center;
+}
+
+
+/* ---------------------------------------------------------
+   K9IQ Responsive
+   --------------------------------------------------------- */
+
+@media (max-width: 1000px) {
+
+    .k9-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 800px) {
+
+    .k9-intro {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .k9-system-flow {
+        grid-template-columns: 1fr;
+        gap: 22px;
+    }
+
+    .k9-arrow {
+        display: none;
+    }
+
+}
+
+
+@media (max-width: 520px) {
+
+    .k9-section {
+        padding-top: 90px;
+        padding-bottom: 90px;
+    }
+
+    .k9-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .k9-card {
+        min-height: 250px;
+    }
+
+    .k9-system {
+        padding: 22px;
+    }
+
+    .k9-system-header {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+}
+
 
 /* =========================================================
    15 — REAL ANALYTIX
