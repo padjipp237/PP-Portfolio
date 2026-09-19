@@ -3269,4 +3269,322 @@ footer {
 
 }
 
+/* =========================================================
+   FINAL VISUAL POLISH
+   ========================================================= */
+
+/* -------------------------
+   Global depth
+   ------------------------- */
+
+.navbar,
+.hero-system,
+.project-card,
+.feature-section .research-content,
+.k9-card,
+.real-main,
+.contact-link {
+    background: rgba(255, 255, 255, 0.018);
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.18),
+        inset 0 1px 0 rgba(255, 255, 255, 0.025);
+}
+
+
+/* -------------------------
+   Navigation
+   ------------------------- */
+
+.navbar.scrolled {
+    background: rgba(8, 8, 8, 0.88);
+    border-bottom-color: rgba(255, 255, 255, 0.10);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+}
+
+.navbar .logo {
+    font-weight: 700;
+    letter-spacing: -0.03em;
+}
+
+
+/* -------------------------
+   Hero
+   ------------------------- */
+
+.hero {
+    overflow: hidden;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+
+    width: 520px;
+    height: 520px;
+
+    top: 10%;
+    right: -180px;
+
+    border-radius: 50%;
+
+    background: radial-gradient(
+        circle,
+        rgba(255, 255, 255, 0.045) 0%,
+        rgba(255, 255, 255, 0.015) 38%,
+        transparent 72%
+    );
+
+    pointer-events: none;
+}
+
+.hero-main,
+.hero-side {
+    position: relative;
+    z-index: 1;
+}
+
+.hero-description {
+    max-width: 620px;
+}
+
+.hero-buttons {
+    margin-top: 34px;
+}
+
+.button {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+
+    border-radius: 4px;
+
+    transition:
+        transform 180ms ease,
+        border-color 180ms ease,
+        background 180ms ease;
+}
+
+.button:hover {
+    transform: translateY(-2px);
+}
+
+
+/* -------------------------
+   Section headings
+   ------------------------- */
+
+.section-heading,
+.feature-header,
+.real-header {
+    position: relative;
+}
+
+.section-heading::before,
+.feature-header::before,
+.real-header::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: -14px;
+
+    width: 32px;
+    height: 1px;
+
+    background: rgba(255, 255, 255, 0.35);
+}
+
+
+/* -------------------------
+   Project cards
+   ------------------------- */
+
+.project-card {
+    border-color: rgba(255, 255, 255, 0.075);
+}
+
+.project-card:hover {
+    transform: translateY(-4px);
+
+    border-color: rgba(255, 255, 255, 0.16);
+
+    box-shadow:
+        0 18px 38px rgba(0, 0, 0, 0.24),
+        inset 0 1px 0 rgba(255, 255, 255, 0.035);
+}
+
+.project-card::before,
+.k9-card::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    width: 0;
+    height: 1px;
+
+    background: rgba(255, 255, 255, 0.45);
+
+    transition: width 220ms ease;
+}
+
+.project-card:hover::before,
+.k9-card:hover::before {
+    width: 100%;
+}
+
+
+/* -------------------------
+   Football research cards
+   ------------------------- */
+
+.research-content,
+.research-copy,
+.research-model {
+    position: relative;
+}
+
+.research-content {
+    border-color: rgba(255, 255, 255, 0.08);
+
+    box-shadow:
+        0 18px 45px rgba(0, 0, 0, 0.20);
+}
+
+.research-model {
+    border-color: rgba(255, 255, 255, 0.10);
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 255, 255, 0.028),
+            rgba(255, 255, 255, 0.008)
+        );
+}
+
+.research-code {
+    border-color: rgba(255, 255, 255, 0.08);
+}
+
+
+/* -------------------------
+   K9IQ cards
+   ------------------------- */
+
+.k9-card {
+    overflow: hidden;
+    border-color: rgba(255, 255, 255, 0.075);
+}
+
+.k9-card:hover {
+    box-shadow:
+        0 18px 40px rgba(0, 0, 0, 0.22);
+}
+
+
+/* -------------------------
+   Real AnalytIX
+   ------------------------- */
+
+.real-main {
+    border-color: rgba(255, 255, 255, 0.08);
+}
+
+.real-logo {
+    text-shadow:
+        0 0 30px rgba(255, 255, 255, 0.045);
+}
+
+.real-flow-item {
+    transition:
+        border-color 180ms ease,
+        background 180ms ease,
+        transform 180ms ease;
+}
+
+.real-flow-item:hover {
+    transform: translateY(-2px);
+    border-color: rgba(255, 255, 255, 0.14);
+}
+
+
+/* -------------------------
+   Contact
+   ------------------------- */
+
+.contact-link {
+    background: rgba(255, 255, 255, 0.012);
+}
+
+.contact-link:hover {
+    background: rgba(255, 255, 255, 0.03);
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+
+/* -------------------------
+   Focus accessibility
+   ------------------------- */
+
+a:focus-visible,
+button:focus-visible {
+    outline: 1px solid rgba(255, 255, 255, 0.65);
+    outline-offset: 5px;
+}
+
+
+/* -------------------------
+   Mobile refinements
+   ------------------------- */
+
+@media (max-width: 800px) {
+
+    .hero::before {
+        width: 360px;
+        height: 360px;
+
+        right: -170px;
+    }
+
+    .hero-system {
+        width: 100%;
+    }
+
+    .project-card,
+    .k9-card {
+        box-shadow:
+            0 8px 24px rgba(0, 0, 0, 0.16);
+    }
+
+    .contact-link:hover {
+        padding-left: 6px;
+        padding-right: 6px;
+    }
+
+}
+
+
+@media (max-width: 520px) {
+
+    .hero::before {
+        right: -220px;
+    }
+
+    .button {
+        width: 100%;
+    }
+
+    .hero-buttons {
+        width: 100%;
+    }
+
+}
+
 
