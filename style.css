@@ -83,15 +83,11 @@ body::before {
     z-index: 0;
 
     background-image:
-        linear-gradient(
+        linear-gradient(rgba(255, 255, 255, 0.025) 1px,
+            transparent 1px),
+        linear-gradient(90deg,
             rgba(255, 255, 255, 0.025) 1px,
-            transparent 1px
-        ),
-        linear-gradient(
-            90deg,
-            rgba(255, 255, 255, 0.025) 1px,
-            transparent 1px
-        );
+            transparent 1px);
 
     background-size: 80px 80px;
 
@@ -115,17 +111,15 @@ body::after {
     pointer-events: none;
     z-index: 0;
 
-    background: radial-gradient(
-        circle,
-        rgba(255, 255, 255, 0.055) 0%,
-        rgba(255, 255, 255, 0) 70%
-    );
+    background: radial-gradient(circle,
+            rgba(255, 255, 255, 0.055) 0%,
+            rgba(255, 255, 255, 0) 70%);
 }
 
 
 
 
-body > * {
+body>* {
     position: relative;
     z-index: 1;
 }
@@ -382,8 +376,7 @@ button:focus-visible {
     margin: 0 auto;
 
     padding:
-        120px 42px
-        55px;
+        120px 42px 55px;
 
     display: flex;
     flex-direction: column;
@@ -397,8 +390,7 @@ button:focus-visible {
     display: grid;
 
     grid-template-columns:
-        minmax(0, 1.35fr)
-        minmax(260px, 0.65fr);
+        minmax(0, 1.35fr) minmax(260px, 0.65fr);
 
     gap: 70px;
 
@@ -683,8 +675,7 @@ button:focus-visible {
     display: grid;
 
     grid-template-columns:
-        170px
-        minmax(0, 1fr);
+        170px minmax(0, 1fr);
 
     gap: 35px;
 
@@ -892,7 +883,7 @@ button:focus-visible {
 }
 
 
-.journey-project > span {
+.journey-project>span {
     color: var(--text-muted);
 
     font-family: monospace;
@@ -1116,8 +1107,7 @@ button:focus-visible {
     display: grid;
 
     grid-template-columns:
-        minmax(0, 1fr)
-        260px;
+        minmax(0, 1fr) 260px;
 
     gap: 50px;
 
@@ -1241,7 +1231,7 @@ button:focus-visible {
    PROJECTS — HIERARCHY
    ========================================================= */
 
-.project-category + .project-category {
+.project-category+.project-category {
     padding-top: 10px;
 }
 
@@ -1482,7 +1472,7 @@ button:focus-visible {
 }
 
 
-.football-intro-copy p + p {
+.football-intro-copy p+p {
     margin-top: 18px;
 }
 
@@ -1810,7 +1800,7 @@ button:focus-visible {
 }
 
 
-.k9-intro-copy p + p {
+.k9-intro-copy p+p {
     margin-top: 18px;
 }
 
@@ -1979,7 +1969,7 @@ button:focus-visible {
 }
 
 
-.k9-status > div {
+.k9-status>div {
     display: flex;
     flex-direction: column;
     gap: 7px;
@@ -1987,7 +1977,7 @@ button:focus-visible {
 }
 
 
-.k9-status > div + div {
+.k9-status>div+div {
     border-left: 1px solid var(--line);
 }
 
@@ -2149,7 +2139,7 @@ button:focus-visible {
 }
 
 
-.real-pillar > span {
+.real-pillar>span {
     color: var(--text-muted);
     font-family: monospace;
     font-size: 0.55rem;
@@ -2198,10 +2188,7 @@ button:focus-visible {
 .real-flow {
     display: grid;
     grid-template-columns:
-        1fr minmax(30px, 0.3fr)
-        1fr minmax(30px, 0.3fr)
-        1fr minmax(30px, 0.3fr)
-        1fr;
+        1fr minmax(30px, 0.3fr) 1fr minmax(30px, 0.3fr) 1fr minmax(30px, 0.3fr) 1fr;
     align-items: center;
 }
 
@@ -2297,7 +2284,7 @@ button:focus-visible {
 }
 
 
-.real-application > span {
+.real-application>span {
     color: var(--text-muted);
     font-family: monospace;
     font-size: 0.5rem;
@@ -2373,8 +2360,7 @@ button:focus-visible {
     max-width: none;
 
     padding:
-        150px 42px
-        80px;
+        150px 42px 80px;
 
     border-top: 1px solid var(--line);
 }
@@ -2432,9 +2418,7 @@ button:focus-visible {
     display: grid;
 
     grid-template-columns:
-        170px
-        minmax(0, 1fr)
-        30px;
+        170px minmax(0, 1fr) 30px;
 
     align-items: center;
 
@@ -2458,7 +2442,7 @@ button:focus-visible {
 }
 
 
-.contact-link > div {
+.contact-link>div {
     display: flex;
     align-items: center;
 
@@ -3083,7 +3067,7 @@ footer {
     }
 
 
-    .k9-status > div + div {
+    .k9-status>div+div {
         border-left: 0;
         border-top: 1px solid var(--line);
     }
@@ -3187,8 +3171,7 @@ footer {
 
     .contact-section {
         padding:
-            90px 18px
-            60px;
+            90px 18px 60px;
     }
 
 
@@ -3328,12 +3311,10 @@ footer {
 
     border-radius: 50%;
 
-    background: radial-gradient(
-        circle,
-        rgba(255, 255, 255, 0.045) 0%,
-        rgba(255, 255, 255, 0.015) 38%,
-        transparent 72%
-    );
+    background: radial-gradient(circle,
+            rgba(255, 255, 255, 0.045) 0%,
+            rgba(255, 255, 255, 0.015) 38%,
+            transparent 72%);
 
     pointer-events: none;
 }
@@ -3461,11 +3442,9 @@ footer {
     border-color: rgba(255, 255, 255, 0.10);
 
     background:
-        linear-gradient(
-            145deg,
+        linear-gradient(145deg,
             rgba(255, 255, 255, 0.028),
-            rgba(255, 255, 255, 0.008)
-        );
+            rgba(255, 255, 255, 0.008));
 }
 
 .research-code {
@@ -3587,4 +3566,54 @@ button:focus-visible {
 
 }
 
+/* =========================================================
+   JOURNEY REFINEMENT
+   ========================================================= */
 
+.timeline-content {
+    position: relative;
+}
+
+.timeline-content p {
+    max-width: 720px;
+    line-height: 1.8;
+}
+
+.timeline-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 20px;
+}
+
+.timeline-tags span {
+    display: inline-flex;
+    align-items: center;
+
+    min-height: 28px;
+    padding: 0 10px;
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 3px;
+
+    background: rgba(255, 255, 255, 0.018);
+
+    font-size: 0.68rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+
+    color: rgba(255, 255, 255, 0.62);
+}
+
+.journey-project {
+    transition:
+        border-color 180ms ease,
+        background 180ms ease,
+        transform 180ms ease;
+}
+
+.journey-project:hover {
+    transform: translateX(4px);
+    border-color: rgba(255, 255, 255, 0.14);
+    background: rgba(255, 255, 255, 0.025);
+}
