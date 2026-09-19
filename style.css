@@ -3617,3 +3617,39 @@ button:focus-visible {
     border-color: rgba(255, 255, 255, 0.14);
     background: rgba(255, 255, 255, 0.025);
 }
+
+/* =========================================================
+   FSI RESEARCH EMPHASIS
+   ========================================================= */
+
+.research-equation {
+    position: relative;
+
+    margin: 28px 0;
+
+    padding: 24px 20px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
+    font-family: "Courier New", monospace;
+    font-size: clamp(1.1rem, 2vw, 1.5rem);
+    letter-spacing: 0.04em;
+
+    color: rgba(255, 255, 255, 0.90);
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(255, 255, 255, 0.018),
+            transparent
+        );
+}
+
+.model-header span:last-child {
+    letter-spacing: 0.12em;
+}
+
+.research-status strong {
+    letter-spacing: 0.10em;
+}
