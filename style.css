@@ -2366,6 +2366,223 @@ button:focus-visible {
 
 
 /* =========================================================
+   12 — CONTACT
+   ========================================================= */
+
+.contact-section {
+    max-width: none;
+
+    padding:
+        150px 42px
+        80px;
+
+    border-top: 1px solid var(--line);
+}
+
+
+.contact-inner {
+    max-width: var(--max-width);
+
+    margin: 0 auto;
+}
+
+
+.contact-heading {
+    max-width: 850px;
+}
+
+
+.contact-heading h2 {
+    max-width: 800px;
+
+    margin-top: 15px;
+    margin-bottom: 25px;
+
+    font-size: clamp(3rem, 8vw, 6.5rem);
+
+    line-height: 0.92;
+
+    letter-spacing: -0.06em;
+}
+
+
+.contact-heading p {
+    max-width: 650px;
+
+    color: var(--text-soft);
+
+    font-size: 1rem;
+
+    line-height: 1.8;
+}
+
+
+/* ---------------------------------------------------------
+   Contact Links
+   --------------------------------------------------------- */
+
+.contact-links {
+    margin-top: 75px;
+
+    border-top: 1px solid var(--line);
+}
+
+
+.contact-link {
+    display: grid;
+
+    grid-template-columns:
+        170px
+        minmax(0, 1fr)
+        30px;
+
+    align-items: center;
+
+    gap: 30px;
+
+    padding: 24px 0;
+
+    border-bottom: 1px solid var(--line);
+
+    transition:
+        padding var(--transition),
+        border-color var(--transition);
+}
+
+
+.contact-link:hover {
+    padding-left: 8px;
+    padding-right: 8px;
+
+    border-color: var(--line-strong);
+}
+
+
+.contact-link > div {
+    display: flex;
+    align-items: center;
+
+    gap: 18px;
+}
+
+
+.contact-number {
+    color: var(--text-muted);
+
+    font-family: monospace;
+
+    font-size: 0.62rem;
+}
+
+
+.contact-link strong {
+    font-family: monospace;
+
+    font-size: 0.72rem;
+
+    letter-spacing: 0.08em;
+
+    text-transform: uppercase;
+}
+
+
+.contact-value {
+    color: var(--text-soft);
+
+    font-size: 0.85rem;
+}
+
+
+.contact-arrow {
+    color: var(--text-muted);
+
+    font-size: 1rem;
+
+    text-align: right;
+
+    transition:
+        transform var(--transition),
+        color var(--transition);
+}
+
+
+.contact-link:hover .contact-arrow {
+    color: var(--text);
+
+    transform: translate(3px, -3px);
+}
+
+
+/* ---------------------------------------------------------
+   Contact Bottom
+   --------------------------------------------------------- */
+
+.contact-bottom {
+    display: flex;
+    justify-content: space-between;
+
+    gap: 25px;
+
+    margin-top: 30px;
+
+    color: var(--text-muted);
+
+    font-family: monospace;
+
+    font-size: 0.58rem;
+
+    letter-spacing: 0.08em;
+}
+
+
+/* =========================================================
+   13 — FOOTER
+   ========================================================= */
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding: 28px 42px;
+
+    border-top: 1px solid var(--line);
+
+    color: var(--text-muted);
+
+    font-family: monospace;
+
+    font-size: 0.58rem;
+    font-weight: 600;
+
+    letter-spacing: 0.1em;
+}
+
+
+/* =========================================================
+   14 — SCROLL REVEAL
+   ========================================================= */
+
+.reveal {
+    opacity: 0;
+
+    transform: translateY(20px);
+
+    transition:
+        opacity 0.7s ease,
+        transform 0.7s ease;
+}
+
+
+.reveal.revealed {
+    opacity: 1;
+
+    transform: translateY(0);
+}
+
+/* =========================================================
    15 — RESPONSIVE
    ========================================================= */
 
@@ -3050,224 +3267,6 @@ button:focus-visible {
         transform: none;
     }
 
-}
-
-
-/* =========================================================
-   12 — CONTACT
-   ========================================================= */
-
-.contact-section {
-    max-width: none;
-
-    padding:
-        150px 42px
-        80px;
-
-    border-top: 1px solid var(--line);
-}
-
-
-.contact-inner {
-    max-width: var(--max-width);
-
-    margin: 0 auto;
-}
-
-
-.contact-heading {
-    max-width: 850px;
-}
-
-
-.contact-heading h2 {
-    max-width: 800px;
-
-    margin-top: 15px;
-    margin-bottom: 25px;
-
-    font-size: clamp(3rem, 8vw, 6.5rem);
-
-    line-height: 0.92;
-
-    letter-spacing: -0.06em;
-}
-
-
-.contact-heading p {
-    max-width: 650px;
-
-    color: var(--text-soft);
-
-    font-size: 1rem;
-
-    line-height: 1.8;
-}
-
-
-/* ---------------------------------------------------------
-   Contact Links
-   --------------------------------------------------------- */
-
-.contact-links {
-    margin-top: 75px;
-
-    border-top: 1px solid var(--line);
-}
-
-
-.contact-link {
-    display: grid;
-
-    grid-template-columns:
-        170px
-        minmax(0, 1fr)
-        30px;
-
-    align-items: center;
-
-    gap: 30px;
-
-    padding: 24px 0;
-
-    border-bottom: 1px solid var(--line);
-
-    transition:
-        padding var(--transition),
-        border-color var(--transition);
-}
-
-
-.contact-link:hover {
-    padding-left: 8px;
-    padding-right: 8px;
-
-    border-color: var(--line-strong);
-}
-
-
-.contact-link > div {
-    display: flex;
-    align-items: center;
-
-    gap: 18px;
-}
-
-
-.contact-number {
-    color: var(--text-muted);
-
-    font-family: monospace;
-
-    font-size: 0.62rem;
-}
-
-
-.contact-link strong {
-    font-family: monospace;
-
-    font-size: 0.72rem;
-
-    letter-spacing: 0.08em;
-
-    text-transform: uppercase;
-}
-
-
-.contact-value {
-    color: var(--text-soft);
-
-    font-size: 0.85rem;
-}
-
-
-.contact-arrow {
-    color: var(--text-muted);
-
-    font-size: 1rem;
-
-    text-align: right;
-
-    transition:
-        transform var(--transition),
-        color var(--transition);
-}
-
-
-.contact-link:hover .contact-arrow {
-    color: var(--text);
-
-    transform: translate(3px, -3px);
-}
-
-
-/* ---------------------------------------------------------
-   Contact Bottom
-   --------------------------------------------------------- */
-
-.contact-bottom {
-    display: flex;
-    justify-content: space-between;
-
-    gap: 25px;
-
-    margin-top: 30px;
-
-    color: var(--text-muted);
-
-    font-family: monospace;
-
-    font-size: 0.58rem;
-
-    letter-spacing: 0.08em;
-}
-
-
-/* =========================================================
-   13 — FOOTER
-   ========================================================= */
-
-footer {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    gap: 20px;
-
-    padding: 28px 42px;
-
-    border-top: 1px solid var(--line);
-
-    color: var(--text-muted);
-
-    font-family: monospace;
-
-    font-size: 0.58rem;
-    font-weight: 600;
-
-    letter-spacing: 0.1em;
-}
-
-
-/* =========================================================
-   14 — SCROLL REVEAL
-   ========================================================= */
-
-.reveal {
-    opacity: 0;
-
-    transform: translateY(20px);
-
-    transition:
-        opacity 0.7s ease,
-        transform 0.7s ease;
-}
-
-
-.reveal.revealed {
-    opacity: 1;
-
-    transform: translateY(0);
 }
 
 
